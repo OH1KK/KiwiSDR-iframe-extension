@@ -5,7 +5,7 @@ var iframe_first_time = true;
 var iframe_poll_interval;
 var iframe_data_canvas;
 var iframe_title = ext_get_cfg_param_string('iframe.title', '', EXT_NO_SAVE);
-var iframe_help = ext_get_cfg_param_string('iframe.help', '', EXT_NO_SAVE);
+var iframe_helptext = ext_get_cfg_param_string('iframe.help', '', EXT_NO_SAVE);
 var iframe_url = ext_get_cfg_param_string('iframe.url', '', EXT_NO_SAVE);
 var iframe_width = ext_get_cfg_param_string('iframe.width', '', EXT_NO_SAVE);
 var iframe_height = ext_get_cfg_param_string('iframe.height', '', EXT_NO_SAVE);
@@ -63,10 +63,10 @@ function iframe_controls_setup()
    var iframe_margin=26; 
    if (iframe_width<=0) iframe_width=450;
    if (iframe_height<=0) iframe_height=450;
-   if (iframe_help == null) iframe_help='';
+   if (iframe_helptext == null) iframe_helptext='';
    if (iframe_url == null) iframe_url='/gfx/kiwi-with-headphones.51x67.png';
    if (iframe_title == null) iframe_title='iframe extension';
-   console.log("iframe_url="+iframe_url+" title="+iframe_title+" width="+iframe_width+" height="+iframe_height+" help="+iframe_help);
+   console.log("iframe_url="+iframe_url+" title="+iframe_title+" width="+iframe_width+" height="+iframe_height+" help="+iframe_helptext);
   
    var data_html =
       '<div id="id-iframe-data"></div>';
@@ -110,9 +110,7 @@ function iframe_config_html()
 function iframe_help(show)
 {
    if (show) {
-      var s = 
-         w3_text('w3-medium w3-bold w3-text-aqua', iframe_title) +
-         '<br>'+iframe_help+'';
+      var s =  w3_text('w3-medium w3-bold w3-text-aqua', iframe_title) + '<br>'+ iframe_helptext+ '';
       confirmation_show_content(s, 610, 125);
    }
    return true;
