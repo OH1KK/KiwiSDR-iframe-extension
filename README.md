@@ -4,7 +4,7 @@ KiwiSDR iframe extension allows you to embed another webpage into KiwiSDR gui
 ![Settings](https://oh1kk.toimii.fi/iframe-extension/iframe_extension_settings.jpg)
 
 
-Place files on /root/extensions folder
+Place github extension files on KiwiSDR's /root/extensions folder
 
 Modify /root/Beagle_SDR_GPS/extensions/ext.cpp and add iframe extension to ext_register function
 
