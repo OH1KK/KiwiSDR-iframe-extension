@@ -1,6 +1,6 @@
 
 iframe extension is merged in to KiwiSDR main code from version KiwiSDR_v1.371. This extension is not needed anymore.
-If you have installed this. Uninstall it before upgrading to KiwiSDR >= v1.371
+If you have installed iframe extension from this repository, uninstall this extenstion before upgrading to KiwiSDR >= v1.371. Otherwise KiwiSDR compile might fail.
 
 THIS EXTENSION IS DEPRECATED AND UNMAINTAINED.
 THIS EXTENSION IS DEPRECATED AND UNMAINTAINED.
